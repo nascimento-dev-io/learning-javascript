@@ -38,7 +38,19 @@ for ( let key in scheme){
 
 Object.setPrototypeOf(objeto, prototipo); // setando prototipo atraves da API do Object 
 
-// COm o metodo Object.create é possivel criar um objeto passando seu prorotipo como parâmentro 
+Object.getPrototypeOf(javascript); // retorna o seu prototipo
+// Com o metodo Object.create é possivel criar um objeto passando seu prorotipo como parâmentro
+
+const scheme = Object.create(functionalLanguage);
+scheme.name = "Scheme";
+scheme.year = 1975; 
+
+
+// Sem prototipo o objeto perde algumas operações importantes ( metodo como hasOwnProperty)
+
+// Caso a mesma propriedade exista no objeto e no seu protoptipo , a propriedade do prototipo é retornada, fazendo sombraa proriedadedo prototipo.
+
+
 
 
 
