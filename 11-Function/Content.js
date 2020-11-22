@@ -46,12 +46,14 @@ const argsFunction = function(){
 argsFunction(1, 2, 3, 4, 5); // => { '0': 1, '1': 2, '2': 3, '3': 4, '4': 5 }
 
 // Também é possivel acessar os parâmentros da função invocada por meio do rest paramenter
-// Retorna um array com os parâmentros passados, deve ser usado como último da lista de parâmentros
+// Retorna um array com os parâmentros passados, deve ser usado como último da lista de parâmentros.
 
 const restFunction = function(...numbers){
   return numbers;
 }
 restFunction(1, 2, 3, 4, 5);  // => [ 1, 2, 3, 4, 5 ]
+
+
 
 
 
