@@ -1,5 +1,8 @@
 <h1 align='center'>MasterClass JavaScript<h1>
 
-<p align= "center"> Curso de fundamentos da linguagem JavaScript ministrado pelo Rodrigo Branas  <p>
+<p align= "center"> Curso de fundamentos da linguagem JavaScript ministrado pelo Rodrigo Branas <br/> </hr>
 
-<small align="center">Código apenas de exemplo não sendo possivel executar em sua integridade</small>
+<sub align= "center">Códigos apenas de exemplo, caso precise executar altere nome de variáveis ou seu tipo.</sub>
+
+
+
