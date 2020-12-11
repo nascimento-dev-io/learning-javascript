@@ -1,4 +1,31 @@
+// Ex-11
+
+/*
+Envolva o código da função execute em um setTimeout com 1000ms.
+
+Crie uma promise e retorne-a.
+
+Execute o comando "create table".
+
+Após a execução de "create table", utilize a função Promise.all para executar os 3
+comandos "insert".
+
+Após a execução dos 3 comandos "insert", faça um select retornando as colunas
+"name" e "author".
+
+*/
+
+/*Ex - 12
+Crie uma função utilizando async.
+
+Invoque cada uma das funções execute utilizando await incluindo o Promise.all.
+
+Envolva as chamadas em um bloco try/catch para tratar as exceções.
+
+*/ 
+
 import {Parser} from "./Parser";
+import {DatabaseError} from "./DatabaseError"
 
 export class Database {
   constructor(){
@@ -70,11 +97,17 @@ export class Database {
     }
   } 
   execute(statement){
-    const result = this.parser.parse(statement);
-    if(result){
-      return this[result.command](result.parsedStatement);
-    }
-    const message = `Syntax error: "${statement}"`;
-    throw new DatabaseError(statement, message);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const result = this.parser.parse(statement);
+        if(result){
+          resolve(this[result.command](result.parsedStatement));
+        }
+        const message = `Syntax error: "${statement}"`;
+        reject(new DatabaseError(statement, message));
+      },1000);
+    });
   }     
+
+     
 };
